@@ -6,12 +6,11 @@ def imprimir_tabuleiro(tabuleiro):
     print(f"{tabuleiro[6]} | {tabuleiro[7]} | {tabuleiro[8]}")
 
 def verificar_vencedor(tabuleiro, jogador):
-    # Verifica todas as possibilidades de vitória
+    
     combinacoes_vencedoras = [
-        [0, 1, 2], [3, 4, 5], [6, 7, 8],  # Linhas
-        [0, 3, 6], [1, 4, 7], [2, 5, 8],  # Colunas
-        [0, 4, 8], [2, 4, 6]              # Diagonais
-    ]
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],  
+        [0, 3, 6], [1, 4, 7], [2, 5, 8], 
+        [0, 4, 8], [2, 4, 6]             
     for combinacao in combinacoes_vencedoras:
         if tabuleiro[combinacao[0]] == tabuleiro[combinacao[1]] == tabuleiro[combinacao[2]] == jogador:
             return True
